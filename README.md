@@ -18,8 +18,8 @@ This is a prototype for a streaming service called Phanflix, built using React a
 ## Installation
 
 1.  Clone the repository
-2.  Run `sudo npm install` to install dependencies
-3.  Run `sudo npm run dev` to start the development server
+2.  Run `npm install` to install dependencies
+3.  Run `npm run dev` to start the development server
 
 ## Usage
 
