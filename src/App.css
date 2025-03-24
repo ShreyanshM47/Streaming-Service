@@ -1,0 +1,280 @@
+.App {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.App-header {
+  background-color: #1a1a1a;
+  padding: 1rem;
+  text-align: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  position: relative;
+  z-index: 100;
+}
+
+.App-header h1 {
+  margin: 0;
+  font-size: 2.5rem;
+  color: #e50914;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.App-header nav {
+  margin-top: 1rem;
+}
+
+.App-header a {
+  color: #fff;
+  text-decoration: none;
+  margin: 0 1.5rem;
+  font-size: 1.1rem;
+  transition: color 0.3s ease;
+}
+
+.App-header a:hover {
+  color: #e50914;
+}
+
+.search-bar {
+  margin-bottom: 1rem;
+}
+
+.search-bar input {
+  padding: 0.75rem 1rem;
+  border: none;
+  border-radius: 5px;
+  width: 80%;
+  max-width: 400px;
+  background-color: #333;
+  color: #fff;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+}
+
+.search-bar input:focus {
+  outline: none;
+  background-color: #444;
+}
+
+.content {
+  flex: 1;
+  padding: 2rem;
+  background-color: #000;
+}
+
+.hero {
+  text-align: center;
+  margin-bottom: 3rem;
+  padding: 2rem;
+  background-color: #0c0c0c;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.hero h2 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  color: #fff;
+}
+
+.hero p {
+  font-size: 1.4rem;
+  color: #aaa;
+  margin-bottom: 2rem;
+}
+
+.hero button {
+  padding: 1rem 2rem;
+  font-size: 1.2rem;
+  background-color: #e50914;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.hero button:hover {
+  background-color: #b80710;
+}
+
+.featured-movies,
+.featured-shows {
+  margin-bottom: 3rem;
+}
+
+.featured-movies h3,
+.featured-shows h3 {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  color: #fff;
+}
+
+.movie-grid,
+.show-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+}
+
+.movie-card,
+.show-card {
+  background-color: #222;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.movie-card:hover,
+.show-card:hover {
+  transform: translateY(-5px);
+}
+
+.media-player {
+  position: relative;
+  width: 100%;
+  height: 150px;
+  overflow: hidden;
+}
+
+.media-player video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.movie-title,
+.show-title {
+  padding: 1rem;
+  text-align: center;
+  font-size: 1.1rem;
+}
+
+.App-footer {
+  background-color: #1a1a1a;
+  padding: 1rem;
+  text-align: center;
+  color: #777;
+  font-size: 0.9rem;
+}
+
+.title-page {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.9);
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  z-index: 200;
+}
+
+.title-page h2 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.title-page .media-player {
+  width: 80%;
+  max-width: 800px;
+  height: auto;
+  margin-bottom: 2rem;
+}
+
+.title-page .media-player video {
+  width: 100%;
+  height: auto;
+}
+
+.title-page button {
+  padding: 1rem 2rem;
+  font-size: 1.2rem;
+  background-color: #e50914;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.title-page button:hover {
+  background-color: #b80710;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .App-header {
+    padding: 0.75rem;
+  }
+
+  .App-header h1 {
+    font-size: 2rem;
+  }
+
+  .App-header nav {
+    margin-top: 0.5rem;
+  }
+
+  .App-header a {
+    margin: 0 0.75rem;
+    font-size: 1rem;
+  }
+
+  .hero {
+    padding: 1.5rem;
+  }
+
+  .hero h2 {
+    font-size: 2.2rem;
+  }
+
+  .hero p {
+    font-size: 1.1rem;
+  }
+
+  .hero button {
+    padding: 0.75rem 1.5rem;
+    font-size: 1.1rem;
+  }
+
+  .movie-grid,
+  .show-grid {
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 1rem;
+  }
+
+  .movie-card,
+  .show-card {
+    padding: 0;
+  }
+
+  .media-player {
+    height: 100px;
+  }
+
+  .movie-title,
+  .show-title {
+    font-size: 1rem;
+    padding: 0.5rem;
+  }
+
+  .title-page h2 {
+    font-size: 2rem;
+  }
+
+  .title-page .media-player {
+    width: 90%;
+  }
+
+  .title-page button {
+    font-size: 1rem;
+  }
+}
